@@ -1,0 +1,8 @@
+[project]
+name = "db-models"
+version = "1.0.0"
+dependencies = ["sqlalchemy"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
