@@ -1,4 +1,4 @@
-name: Build and Release
+name: Build and release
 
 on:
   push:
@@ -17,7 +17,6 @@ jobs:
           python-version: "3.13"
       - run: pip install build
       - run: python -m build --wheel
-      - name: Create GitHub release
-        env:
+      - env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         run: gh release create ${GITHUB_REF_NAME} dist/*.whl --generate-notes
