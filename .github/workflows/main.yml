@@ -15,6 +15,6 @@ jobs:
         with:
           python-version: "3.13"
       - run: | 
-        pip install build
-        python -m build
+          pip install build
+          python -m build
       - uses: pypa/gh-action-pypi-publish@release/v1
